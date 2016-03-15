@@ -12,7 +12,7 @@ _{NPM and Bower template with all of the packages pre-installed and linked}_
 
 * _Fork this project from https://github.com/keirstaple/node-bower-template.git_
 * _Clone this project to your local drive_
-* _$ npm install_
+* _$ npm install AND $ bower install_
 * _Install any other packages you want to include and make sure to add tasks to the gulpfile_
 * _Make sure there is a .gitignore file before you $ git init_
 * _Link variables through exports and require_
