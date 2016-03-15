@@ -16,6 +16,7 @@ _{NPM and Bower template with all of the packages pre-installed and linked}_
 * _Install any other packages you want to include and make sure to add tasks to the gulpfile_
 * _Make sure there is a .gitignore file before you $ git init_
 * _Link variables through exports and require_
+* _You will need to login to the API host and create your own account so that you can receive an API Key. This will then be stored in your own .env file that is included in your .gitignore so that it's not viewable by the public. Export to your -interface file and use require to store the API Key in a variable_
 
 ## Known Bugs
 
