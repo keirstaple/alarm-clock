@@ -1,3 +1,5 @@
+var AlarmClock = require("./../js/alarm.js").AlarmClock;
+
 $(document).ready(function(){
   setInterval(updateTime, 1000);
   function updateTime() {
@@ -11,15 +13,22 @@ $(document).ready(function(){
     var meridian = (moment().format('a'));
     var currentTime = hour + ":" + minute + " " + meridian;
 
+
+    console.log(currentTime);
+
     var alarmHour = $('select#hour').val();
     var alarmMinute = $('select#minute').val();
     var alarmMeridian = $('select#meridian').val();
     var alarm = alarmHour + ":" + alarmMinute + " " + alarmMeridian;
 
+    var newAlarm = new AlarmClock(alarm);
+    console.log(alarm);
+
     setInterval(wakeUp, 1000);
     function wakeUp() {
-      if (currentTime === alarm) {
-        alert("time to wake up!");
+      var currentFullTime = moment().format('h:mm a');
+      if (currentFullTime === newAlarm.getAlarmTime) {
+        console.log("time to wake up!");
       }
       else {
         console.log("keep sleeping zzz");
